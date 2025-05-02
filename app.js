@@ -1,8 +1,9 @@
 const express = require('express');
-const sgMail = require('@sendgrid/mail');  // Import SendGrid
+const sgMail = require('@sendgrid/mail');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-require('dotenv').config();  // Load .env file
+const path = require('path');
+require('dotenv').config();
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -12,14 +13,18 @@ const port = process.env.PORT || 3000;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors({
-    origin: 'http://127.0.0.1:8080', // Allow requests from this origin
-    methods: ['GET', 'POST'], // Allow these methods
+    origin: '*', // Allow all origins for now; restrict to your Render URL in production
+    methods: ['GET', 'POST'],
 }));
 
 
-//for testing
-console.log('SendGrid API Key:', process.env.SENDGRID_API_KEY);
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+// Serve static files from the root directory
+app.use(express.static(path.join(__dirname, '.')));
+
+// Explicitly serve index.html for the root route
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
 
 // Set SendGrid API Key
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);  // Make sure to add your SendGrid API key in .env
