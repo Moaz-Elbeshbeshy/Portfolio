@@ -1,44 +1,17 @@
-# vCard - Personal portfolio
+# Moaz Elbeshbeshy's Portfolio
 
-![GitHub repo size](https://img.shields.io/github/repo-size/codewithsadee/vcard-personal-portfolio)
-![GitHub stars](https://img.shields.io/github/stars/codewithsadee/vcard-personal-portfolio?style=social)
-![GitHub forks](https://img.shields.io/github/forks/codewithsadee/vcard-personal-portfolio?style=social)
-[![Twitter Follow](https://img.shields.io/twitter/follow/codewithsadee_?style=social)](https://twitter.com/intent/follow?screen_name=codewithsadee_)
-[![YouTube Video Views](https://img.shields.io/youtube/views/SoxmIlgf2zM?style=social)](https://youtu.be/SoxmIlgf2zM)
-
-vCard is a fully responsive personal portfolio website, responsive for all devices, built using HTML, CSS, and JavaScript.
+This is my personal portfolio website, showcasing my skills, experience, and projects as a Backend and DevOps Developer. The site is fully responsive, optimized for all devices, and includes a contact form powered by a Node.js backend with SendGrid integration for email functionality.
 
 ## Demo
+https://portfolio-y142.onrender.com
 
-![vCard Desktop Demo](./website-demo-image/desktop.png "Desktop Demo")
-![vCard Mobile Demo](./website-demo-image/mobile.png "Mobile Demo")
+## Features
+- Responsive design for all devices
+- About, Resume, Portfolio, and Contact sections
+- Contact form with email functionality using SendGrid
+- Built with HTML, CSS, JavaScript, and Node.js
 
-## Prerequisites
-
-Before you begin, ensure you have met the following requirements:
-
-* [Git](https://git-scm.com/downloads "Download Git") must be installed on your operating system.
-
-## Installing vCard
-
-To install **vCard**, follow these steps:
-
-Linux and macOS:
-
-```bash
-sudo git clone https://github.com/codewithsadee/vcard-personal-portfolio.git
-```
-
-Windows:
-
-```bash
-git clone https://github.com/codewithsadee/vcard-personal-portfolio.git
-```
-
-## Contact
-
-If you want to contact me you can reach me at [Twitter](https://www.twitter.com/codewithsadee).
-
-## License
-
-MIT
+## Setup (For Local Development)
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Moaz-Elbeshbeshy/Portfolio.git
