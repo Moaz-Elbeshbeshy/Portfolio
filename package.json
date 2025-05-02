@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@parcel/transformer-sass": "^2.14.4",
+    "http-server": "^14.1.1"
+  }
+}
