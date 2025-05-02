@@ -1,4 +1,9 @@
 {
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
     "@parcel/transformer-sass": "^2.14.4",
     "@sendgrid/mail": "^8.1.5",
