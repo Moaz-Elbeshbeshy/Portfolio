@@ -935,27 +935,57 @@
         </section>
 
         <section class="contact-form">
-
           <h3 class="h3 form-title">Contact Form</h3>
-
-          <form action="#" class="form" data-form>
+          <form id="contact-form" class="form">
 
             <div class="input-wrapper">
               <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-
               <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
             </div>
 
             <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
 
-            <button class="form-btn" type="submit" disabled data-form-btn>
+            <button class="form-btn" type="submit" data-form-btn>
               <ion-icon name="paper-plane"></ion-icon>
               <span>Send Message</span>
             </button>
 
           </form>
-
         </section>
+
+        <script>
+          document.getElementById('contact-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const formData = new FormData(event.target);
+            const data = {
+              fullname: formData.get('fullname'),
+              email: formData.get('email'),
+              message: formData.get('message')
+            };
+
+            // Send the form data to your backend server using fetch
+            fetch('http://localhost:3000/send-email', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(data),
+            })
+              .then(response => response.json()) // Parse JSON response
+              .then(data => {
+                if (data.error) {
+                  throw new Error(data.error);
+                }
+                alert(data.message || 'Message sent successfully!');
+                event.target.reset(); // Reset the form after successful submission
+              })
+              .catch(error => {
+                alert('Error sending message: ' + error.message);
+              });
+          });
+        </script>
+
 
       </article>
 
