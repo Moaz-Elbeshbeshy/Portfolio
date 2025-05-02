@@ -5,7 +5,8 @@ const cors = require('cors');
 require('dotenv').config();  // Load .env file
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
+
 
 // Middleware to parse JSON and URL-encoded data
 app.use(bodyParser.json());
@@ -57,6 +58,6 @@ app.post('/send-email', (req, res) => {
 });
 
 // Start the server
-app.listen(port, () => {
+app.listen(port, '0.0.0.0', () => {
     console.log(`Server running on http://localhost:${port}`);
 });
