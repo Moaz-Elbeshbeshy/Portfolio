@@ -151,10 +151,6 @@
 
     </aside>
 
-
-
-
-
     <!--
       - #main-content
     -->
@@ -181,6 +177,9 @@
             <button class="navbar-link" data-nav-link>Portfolio</button>
           </li>
 
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Certificates</button>
+          </li>
 
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Contact</button>
@@ -189,10 +188,6 @@
         </ul>
 
       </nav>
-
-
-
-
 
       <!--
         - #ABOUT
@@ -223,7 +218,6 @@
           </p>
         </section>
 
-
         <!--
           - service
         -->
@@ -237,8 +231,7 @@
             <li class="service-item">
 
               <div class="apiGear-icon-box">
-                <img src="./assets/images/icon-apiGear.svg
-                " alt="apiGear icon" width="40">
+                <img src="./assets/images/icon-apiGear.svg" alt="apiGear icon" width="40">
               </div>
 
               <div class="service-content-box">
@@ -306,7 +299,6 @@
           </ul>
 
         </section>
-
 
         <!--
           - testimonials
@@ -408,7 +400,6 @@
 
         </section>
 
-
         <!--
           - testimonials modal
         -->
@@ -452,7 +443,6 @@
           </section>
 
         </div>
-
 
         <!--
           - clients
@@ -505,10 +495,6 @@
         </section>
 
       </article>
-
-
-
-
 
       <!--
         - #RESUME
@@ -614,7 +600,6 @@
 
             </li>
 
-
             <li class="timeline-item">
 
               <h4 class="h4 timeline-item-title">High school of math and science</h4>
@@ -631,7 +616,6 @@
           </ol>
 
         </section>
-
 
         <section class="skill">
 
@@ -723,12 +707,7 @@
 
         </section>
 
-
       </article>
-
-
-
-
 
       <!--
         - #PORTFOLIO
@@ -912,9 +891,65 @@
 
       </article>
 
+      <!--
+        - #CERTIFICATES
+      -->
 
+      <article class="certificates" data-page="certificates">
 
+        <header>
+          <h2 class="h2 article-title">Certificates</h2>
+        </header>
 
+        <section class="projects">
+
+          <ul class="filter-list">
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+            <li class="filter-item">
+              <button data-filter-btn>API</button>
+            </li>
+          </ul>
+
+          <div class="filter-select-box">
+            <button class="filter-select" data-select>
+              <div class="select-value" data-selecct-value>Select category</div>
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+            </button>
+
+            <ul class="select-list">
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+              <li class="select-item">
+                <button data-select-item>API</button>
+              </li>
+            </ul>
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item active" data-filter-item data-category="api">
+              <a href="https://www.freecodecamp.org/certification/Moaz-Elbeshbeshy/back-end-development-and-apis">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/FCC Back End Dev.png" alt="certificate" loading="lazy">
+                </figure>
+                <h3 class="project-title">FCC BackEnd Developement and APIs</h3>
+                <p class="project-category">API</p>
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
 
       <!--
         - #CONTACT
@@ -986,18 +1021,11 @@
           });
         </script>
 
-
       </article>
-
 
     </div>
 
   </main>
-
-
-
-
-
 
   <!--
     - custom js link
